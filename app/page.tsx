@@ -271,8 +271,9 @@ export default function Component() {
       </div>
 
       <div className="w-full ">
-        <div className="rounded-lg bg-[#DFCEA0] mb-4 ">
-          <div className="flex rounded-lg overflow-x-scroll scrollbar-visible">
+        {/* <div className=" overflow-x-scroll w-full"> */}
+        <div className="rounded-lg bg-[#DFCEA0] w-full overflow-auto  mb-4">
+          <div className="flex rounded-lg  bg-[#DFCEA0] ">
             {Object.entries({
               "hot-coffee": { icon: Coffee, label: "Hot Coffee" },
               "cold-drinks": { icon: IceCream, label: "Cold Drinks" },
@@ -282,22 +283,21 @@ export default function Component() {
               <button
                 key={key}
                 onClick={() => setActiveTab(key)}
-                className={`flex items-center font-medium px-4 py-2 ${
-                  activeTab === key
-                    ? "bg-[#A1824A] text-white"
-                    : "text-amber-950 "
-                } rounded-lg transition-colors duration-200 flex-shrink-0`}
+                className={`flex items-center font-medium px-4 py-2 ${activeTab === key
+                  ? "bg-[#A1824A] text-white"
+                  : "text-amber-950 "
+                  } rounded-lg transition-colors duration-200 flex-shrink-0`}
               >
                 <Icon
-                  className={`mr-2 h-4 w-4 duration-200 ease-linear ${
-                    activeTab === key ? "h-6 w-6" : ""
-                  }`}
+                  className={`mr-2 h-4 w-4 duration-200 ease-linear ${activeTab === key ? "h-6 w-6" : ""
+                    }`}
                 />
                 {label}
               </button>
             ))}
           </div>
         </div>
+        {/* </div> */}
 
         {activeTab === "hot-coffee" && (
           <MenuSection title="Hot Coffee" items={menuItems["hot-coffee"]} />

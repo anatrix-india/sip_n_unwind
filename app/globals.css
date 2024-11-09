@@ -7,11 +7,12 @@ body {
 }
 
 /* For custom scrollbar styles */
-.scrollbar-visible::-webkit-scrollbar {
-    height: 8px;
-}
+/* .scrollbar-visible::-webkit-scrollbar {
+    height: 6px;
+} */
 
 .scrollbar-visible::-webkit-scrollbar-thumb {
-    background-color: black;
+    background-color: white;
+    opacity: 0.2;
     border-radius: 4px;
 }
