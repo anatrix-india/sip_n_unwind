@@ -336,7 +336,7 @@ interface MenuSectionProps {
   items: MenuItemProps[];
 }
 
-const MenuSection: React.FC<MenuSectionProps> = ({ title, items }) => (
+const MenuSection: React.FC<MenuSectionProps> = ({ items }) => (
   <div className="mb-4 bg-[#DFCEA0] rounded-lg shadow">
     {/* <div className="px-4 py-5 border-b border-[#A1824A]">
       <h3 className="text-lg font-medium text-[#A1824A]">{title}</h3>
